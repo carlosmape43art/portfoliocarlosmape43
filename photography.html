@@ -45,7 +45,7 @@
     <!-- Navegación -->
     <nav class="navbar">
         <div class="container nav-container">
-            <h1 class="logo">Portfolio</h1>
+            <h1 class="logo">Portfolio CMAPE</h1>
             <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -68,38 +68,38 @@
             <p class="section-description">Capturando momentos únicos con creatividad y profesionalismo</p>
             
             <div class="gallery">
-                <div class="gallery-item">
-                    <img src="images/photography/gato.jpg" alt="Fotografía 1">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="images/photography/gato.jpg" alt="Fotografía 1" data-description="Un hermoso retrato de gato capturado en su momento más expresivo">
                     <div class="overlay">
                         <p>Proyecto 1</p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/photography/leon.jpg" alt="Fotografía 2">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="images/photography/leon.jpg" alt="Fotografía 2" data-description="Majestad felina en su máxima expresión, capturada en detalle">
                     <div class="overlay">
                         <p>Proyecto 2</p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/photography/photo3.jpg" alt="Fotografía 3">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="images/photography/photo3.jpg" alt="Fotografía 3" data-description="Una composición artística que juega con luces y sombras">
                     <div class="overlay">
                         <p>Proyecto 3</p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/photography/photo4.jpg" alt="Fotografía 4">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="images/photography/photo4.jpg" alt="Fotografía 4" data-description="Momento capturado en su esencia más pura y emocional">
                     <div class="overlay">
                         <p>Proyecto 4</p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/photography/photo5.jpg" alt="Fotografía 5">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="images/photography/photo5.jpg" alt="Fotografía 5" data-description="Una perspectiva única que cuenta una historia visual">
                     <div class="overlay">
                         <p>Proyecto 5</p>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="images/photography/photo6.jpg" alt="Fotografía 6">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="images/photography/photo6.jpg" alt="Fotografía 6" data-description="Belleza natural capturada con técnica y creatividad">
                     <div class="overlay">
                         <p>Proyecto 6</p>
                     </div>
@@ -107,6 +107,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal para ver imágenes en grande -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-description">
+                <p id="modalText"></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="contact-section">
@@ -156,6 +167,40 @@
           navMenu.classList.remove('active');
           hamburger.classList.remove('active');
         });
+      });
+
+      // Modal de imágenes
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalText = document.getElementById('modalText');
+
+      function openModal(element) {
+        const img = element.querySelector('img');
+        const description = img.getAttribute('data-description');
+        
+        modalImage.src = img.src;
+        modalText.textContent = description;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Cerrar modal al hacer clic fuera
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Cerrar modal con tecla ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
       });
     </script>
 </body>
