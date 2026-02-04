@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #b30000; /* Rojo vibrante de fondo */
+            overflow: hidden;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* El humo denso que se mueve */
+        .smoke-ball {
+            position: absolute;
+            width: 600px; /* Tamaño de la mancha */
+            height: 600px;
+            /* Gradiente muy denso en el centro y suave en bordes */
+            background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, transparent 70%);
+            filter: blur(40px);
+            border-radius: 50%;
+            opacity: 0.8;
+            z-index: 1;
+            /* Animación: nombre duración infinito trayectoria-suave */
+            animation: travel 20s infinite linear;
+        }
+
+        /* Segunda mancha para que el humo se vea más dinámico y no sea solo un círculo */
+        .smoke-ball-2 {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, transparent 65%);
+            filter: blur(50px);
+            opacity: 0.6;
+            z-index: 1;
+            animation: travel 25s infinite linear reverse; /* Se mueve al revés */
+        }
+
+        /* Trayectoria del humo por la pantalla */
+        @keyframes travel {
+            0% { top: -10%; left: -10%; transform: scale(1); }
+            25% { top: 20%; left: 80%; transform: scale(1.2) rotate(90deg); }
+            50% { top: 70%; left: 50%; transform: scale(0.9) rotate(180deg); }
+            75% { top: 40%; left: -20%; transform: scale(1.3) rotate(270deg); }
+            100% { top: -10%; left: -10%; transform: scale(1); }
+        }
+
+        /* Menú de texto */
+        .menu {
+            position: relative;
+            z-index: 10; /* Encima del humo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #000;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .menu h1 {
+            font-size: 5rem;
+            margin: -5px 0; /* Juntar un poco las letras como en la imagen */
+            letter-spacing: -4px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="smoke-ball"></div>
+    <div class="smoke-ball-2"></div>
+
+    <div class="menu">
+        <h1>ABOUT</h1>
+        <h1>POSTER</h1>
+        <h1>ALBUM</h1>
+        <h1>EDITORIAL</h1>
+        <h1>3D</h1>
+        <h1>GALLERY</h1>
+        <h1>CONTACT</h1>
+    </div>
+
+</body>
+</html>

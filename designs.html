@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño - Mi Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      /* Reset básico - IMPORTANTE */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      /* Vídeo de fondo */
+      .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.8);
+        pointer-events: none;
+      }
+
+      /* Opcional: quitar vídeo en móviles */
+      @media (max-width: 768px) {
+        .video-bg {
+          display: none;
+        }
+      }
+    </style>
+</head>
+<body class="designs-page">
+    <!-- Vídeo de fondo -->
+    <video class="video-bg" autoplay muted loop playsinline>
+        <source src="video_background.mp4" type="video/mp4">
+        Tu navegador no soporta vídeos HTML5
+    </video>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">Portfolio</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="photography.html" class="nav-link">Fotografía</a></li>
+                <li><a href="designs.html" class="nav-link">Diseño</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de Diseño -->
+    <section id="diseño" class="portfolio-section design-section">
+        <div class="container">
+            <h2 class="section-title">Diseño</h2>
+            <p class="section-description">Diseños creativos que comunican tu mensaje visualmente</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/design/design1.jpg" alt="Diseño 1">
+                    <div class="overlay">
+                        <p>Proyecto 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/design/design2.jpg" alt="Diseño 2">
+                    <div class="overlay">
+                        <p>Proyecto 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/design/design3.jpg" alt="Diseño 3">
+                    <div class="overlay">
+                        <p>Proyecto 3</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/design/design4.jpg" alt="Diseño 4">
+                    <div class="overlay">
+                        <p>Proyecto 4</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/design/design5.jpg" alt="Diseño 5">
+                    <div class="overlay">
+                        <p>Proyecto 5</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/design/design6.jpg" alt="Diseño 6">
+                    <div class="overlay">
+                        <p>Proyecto 6</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-description">¿Te gustaría trabajar conmigo? ¡Ponte en contacto!</p>
+            
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu correo" required>
+                    <textarea placeholder="Tu mensaje" rows="6" required></textarea>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Email:</strong> tu@email.com</p>
+                    <p><strong>Teléfono:</strong> +34 XXX XXX XXX</p>
+                    <p><strong>Ubicación:</strong> Tu Ciudad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mi Portfolio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

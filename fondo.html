@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi web con vídeo de fondo</title>
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Vídeo de fondo */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; /* Se adapta sin deformarse */
+      z-index: -1;
+      filter: brightness(0.8); /* Un poco más oscuro para leer mejor */
+    }
+
+    /* Contenido encima */
+    .contenido {
+      min-height: 250vh; /* Página larga */
+      padding: 4rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    /* Opcional: quitar vídeo en móviles */
+    @media (max-width: 768px) {
+      .video-bg {
+        display: none;
+      }
+
+      body {
+        background: black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Vídeo de fondo -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video_background.mp4" type="video/mp4">
+    Tu navegador no soporta vídeos HTML5
+  </video>
+
+  <!-- Contenido -->
+  <div class="contenido">
+    <h1>Mi web guapísima 🎃</h1>
+    <p>
+      Este es el contenido de mi página web.
+      Puedo hacerla todo lo larga que quiera y el vídeo
+      seguirá ocupando toda la pantalla como fondo.
+    </p>
+
+    <p style="margin-top: 150vh;">
+      Aquí abajo sigue habiendo contenido 😎  
+      Scroll infinito activado.
+    </p>
+  </div>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
 # Cómo funciona
 
 1 - Abir visual studio code
-2 - Arriba a la izquierda, File -> Open Folder -> y abrir Documentos\web\portfoliocarlosmape43 .
+2 - Arriba a la izquierda, File -> Open Folder -> y abrir Documentos\web\portfoliocarlosmape43 y darle a selct.
 3 - Ahora tienes aquí el proyecto con varias carpetas.
 4 - Para abrirlo y ver todos los cambios, abrir archivos,  Documentos\web\portfoliocarlosmape43  y aquí pulsar en index.html para ver todo.
 5- El index.html, no se puede cambiar el nombre del archivo, este es el nombre principal
