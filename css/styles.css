@@ -179,7 +179,7 @@ body {
 }
 
 .about-image {
-    max-width: 312px;
+    max-width: 624px;
     width: 100%;
     height: auto;
     margin: 2rem auto 0;
@@ -438,6 +438,16 @@ body.designs-page {
     color: #ffffff;
     font-size: 1.1rem;
     margin-bottom: 3rem;
+}
+
+/* Título encima de las tarjetas de portfolio */
+.portfolio-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
 }
 
 /* ============================================
@@ -776,7 +786,7 @@ body.designs-page {
     }
 
     .about-image {
-        max-width: 250px;
+        max-width: 500px;
     }
 
     .about-section {
@@ -952,7 +962,7 @@ body.designs-page {
     }
 
     .about-image {
-        max-width: 225px;
+        max-width: 450px;
     }
 
     .stat-item {
