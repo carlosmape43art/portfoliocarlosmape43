@@ -33,13 +33,6 @@
         filter: brightness(0.8);
         pointer-events: none;
       }
-
-      /* Opcional: quitar vídeo en móviles */
-      @media (max-width: 768px) {
-        .video-bg {
-          display: none;
-        }
-      }
     </style>
 </head>
 <body class="photography-page">
@@ -53,8 +46,14 @@
     <nav class="navbar">
         <div class="container nav-container">
             <h1 class="logo">Portfolio</h1>
-            <ul class="nav-menu">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#conoceme" class="nav-link">Conoceme</a></li>
                 <li><a href="photography.html" class="nav-link">Fotografía</a></li>
                 <li><a href="designs.html" class="nav-link">Diseño</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -139,5 +138,25 @@
             <p>&copy; 2026 Mi Portfolio. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+      // Menú hamburguesa
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('navMenu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+
+      // Cerrar menú al hacer clic en un link
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('active');
+        });
+      });
+    </script>
 </body>
 </html>

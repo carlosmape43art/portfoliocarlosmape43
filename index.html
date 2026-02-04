@@ -33,13 +33,6 @@
         filter: brightness(0.8);
         pointer-events: none;
       }
-
-      /* Opcional: quitar vídeo en móviles */
-      @media (max-width: 768px) {
-        .video-bg {
-          display: none;
-        }
-      }
     </style>
 </head>
 <body>
@@ -53,8 +46,14 @@
     <nav class="navbar">
         <div class="container nav-container">
             <h1 class="logo">Portfolio</h1>
-            <ul class="nav-menu">
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="#conoceme" class="nav-link">Conoceme</a></li>
                 <li><a href="photography.html" class="nav-link">Fotografía</a></li>
                 <li><a href="designs.html" class="nav-link">Diseño</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -67,6 +66,44 @@
         <div class="hero-content">
             <h2>Portfolio</h2>
             <p class="hero-subtitle">VISUAL EXPERIENCES & CREATIVE DESIGN</p>
+        </div>
+    </section>
+
+    <!-- Sección Conoceme -->
+    <section id="conoceme" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy un creativo apasionado por capturar momentos únicos y diseñar experiencias visuales impactantes. 
+                        Con varios años de experiencia en fotografía y diseño gráfico, he trabajado con marcas reconocidas 
+                        para transformar sus visiones en realidad.
+                    </p>
+                    <p>
+                        Mi enfoque combina técnica profesional con una perspectiva artística, siempre buscando destacar 
+                        la esencia de cada proyecto y conectar con la audiencia de manera significativa.
+                    </p>
+                    <p>
+                        Cuando no estoy capturando momentos o diseñando, me encuentro explorando nuevas técnicas, 
+                        viajando en busca de inspiración o contribuyendo a proyectos creativos comunitarios.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Proyectos Completados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Años Experiencia</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -105,5 +142,25 @@
             <p>&copy; 2026 Mi Portfolio. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+      // Menú hamburguesa
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('navMenu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+
+      // Cerrar menú al hacer clic en un link
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('active');
+        });
+      });
+    </script>
 </body>
 </html>
