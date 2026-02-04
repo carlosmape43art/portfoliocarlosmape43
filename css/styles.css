@@ -16,9 +16,9 @@
     --transition: all 0.3s ease;
     
     /* Colores para degradados - Paleta profesional y sobria */
-    --gradient-dark-blue: #0f172a;
-    --gradient-slate-blue: #1e293b;
-    --gradient-light-slate: #334155;
+    --gradient-dark-blue: #0f2a42;
+    --gradient-slate-blue: #0f2a42;
+    --gradient-light-slate: #0f2a42;
     --gradient-dark-gray: #1f2937;
     --gradient-cool-gray: #374151;
     --gradient-light-gray: #e2e8f0;
@@ -53,7 +53,7 @@ body {
    ============================================ */
 
 .navbar {
-    background-color: #0f2a42;
+    background-color: var(--gradient-dark-blue);
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
@@ -380,7 +380,7 @@ body {
 }
 
 .card-link {
-    color: rgba(232, 180, 184, 0.9);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -699,7 +699,7 @@ body.designs-page {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(232, 180, 184, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
 }
 
 .btn:active {
@@ -711,11 +711,11 @@ body.designs-page {
    ============================================ */
 
 .footer {
-    background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(90deg, var(--gradient-dark-blue) 0%, var(--gradient-dark-blue) 100%);
     color: var(--white);
     text-align: center;
     padding: 2rem;
-    border-top: 1px solid rgba(232, 180, 184, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Tablets (768px y menores) */
