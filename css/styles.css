@@ -157,10 +157,11 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: center;
-    max-width: 1000px;
+    justify-items: center;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -168,12 +169,23 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    text-align: center;
 }
 
 .about-text p {
     font-size: 1rem;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.85);
+}
+
+.about-image {
+    max-width: 312px;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto 0;
+    display: block;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .about-stats {
@@ -228,7 +240,7 @@ body {
 
 .hero-content h2 {
     font-size: 4.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     font-weight: 700;
     letter-spacing: -2px;
     font-family: 'Playfair Display', serif;
@@ -241,13 +253,16 @@ body {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
-    margin-top: 2rem;
+    margin: 0 0 0.8rem 0;
+     margin-bottom: 3rem;
 }
 
 .hero-logo {
-    margin-top: 1rem;
+    margin-top: 1000px;
+    margin: 5rem auto;
     max-width: 400px;
     height: auto;
+    display: block;
     animation: fadeInUp 1s ease-out 0.5s both;
 }
 
@@ -760,6 +775,10 @@ body.designs-page {
         gap: 2rem;
     }
 
+    .about-image {
+        max-width: 250px;
+    }
+
     .about-section {
         padding: 60px 20px;
     }
@@ -784,11 +803,13 @@ body.designs-page {
     .hero-content h2 {
         font-size: 2.5rem;
         letter-spacing: -1px;
+        margin-bottom: 0.6rem;
     }
 
     .hero-subtitle {
         font-size: 0.85rem;
         letter-spacing: 2px;
+        margin: 0 0 0.6rem 0;
     }
 
     .portfolio-cards-section {
@@ -930,6 +951,10 @@ body.designs-page {
         line-height: 1.6;
     }
 
+    .about-image {
+        max-width: 225px;
+    }
+
     .stat-item {
         padding: 1.5rem;
     }
@@ -955,7 +980,8 @@ body.designs-page {
     .hero-subtitle {
         font-size: 0.7rem;
         letter-spacing: 1px;
-        margin-top: 1rem;
+        margin: 1rem auto;
+        display: block;
     }
 
     .portfolio-cards-section {
