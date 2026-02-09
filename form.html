@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Contacto</title>
+</head>
+<body>
+  <form action="https://api.staticforms.dev/submit" method="POST">
+    <!-- API KEY: aquí va tu clave -->
+    <input type="hidden" name="apiKey" value="sf_lb8d5m46ddmc0i2f460b7f05">
+
+    <!-- (Opcional) Asunto del email -->
+    <input type="hidden" name="subject" value="Nuevo mensaje desde mi web">
+
+    <!-- (Opcional) URL a donde redirigir tras enviar -->
+    <input type="hidden" name="redirectTo" value="https://tusitio.com/gracias.html">
+
+    <label>Nombre:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Mensaje:</label>
+    <textarea name="message" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
